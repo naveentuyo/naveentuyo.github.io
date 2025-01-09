@@ -5,23 +5,28 @@ body {
 header {
   font-size: 6vw; /* Adjust the font size as needed */
   text-align: center;
+  margin: 0 auto;
+  font-weight: 400;
   margin-top: 5vw;
-  width: 100vw;
-  position: absolute;
-  color: black;
-  top: 0;
+  width: 95vw;
+  position: relative;
+  color: white;
+  background-color: #0000008b;
+  text-decoration: dashed;
+  top: -58vw;
   z-index: 1;
 }
 
 
 
 .midbutton {
+  position: relative;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: -8rem;
-  margin-bottom: 2rem;
-  background-color: #4CAF50;
+  margin-top: -25vw;
+  margin-bottom: 10vw;
+  z-index: 2;
 }
 
 button img{
@@ -82,11 +87,20 @@ a {
   font-size: 1.25rem;
   text-decoration: none;
   color: whitesmoke;
+}
 
+a.here{
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 a:visited{
   color: whitesmoke;
+}
+
+a.here:visited{
+  color: rgb(0, 0, 0);
 }
 
 /* Major Third */
@@ -108,16 +122,16 @@ h3{
   top: -0rem;
   height: auto;
   object-fit: cover;
-  filter: brightness(.5);
+  filter: brightness(.9);
+  z-index: 1;
 }
-
 
 .card{
   display: flex;
   flex-direction: column;
   padding: 0 5%;
   width: 80%;
-  height: 400px;
+ /* height: 400px; */
   background-color: rgba(1, 1, 1, 0.05);
   border-radius: 1.5rem;
   border: 2px solid black;
