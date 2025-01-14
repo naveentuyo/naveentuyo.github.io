@@ -3,29 +3,30 @@ body {
 }
 
 header {
-  font-size: 6vw; /* Adjust the font size as needed */
+  font-size: 7vw; /* Adjust the font size as needed */
   text-align: center;
   margin: 0 auto;
   font-weight: 400;
-  margin-top: 5vw;
   width: 95vw;
   position: relative;
+  margin-bottom: -14vw;
   color: white;
   background-color: #0000008b;
   text-decoration: dashed;
-  top: -58vw;
-  z-index: 1;
+  z-index: 3;
 }
 
 
 
 .midbutton {
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50vw;
+  transform: translateX(-50%);
+  bottom: 5%;
+ 
   display: flex;
   justify-content: center;
-  margin-top: -25vw;
-  margin-bottom: 10vw;
   z-index: 2;
 }
 
@@ -52,33 +53,37 @@ button {
   cursor: pointer;
 }
 
-.sidebar {
+.sidebar { 
   position: sticky;
-  top: 80px;
-  margin-bottom: -13.2rem;
-  margin-top: 5rem;
+  top: 0rem;
   width: 10%;
-  min-width: 5rem;
+  height: 13rem;
+  min-width: 8rem;
   background-color: chocolate;
 
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
 
   /*make sticky*/
 }
 
-.wholepage{
-  position: relative;
-  padding: 0 1%;
-  left: 10%;
+.wholepage {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content{
   width: 90%;
   height: 100%;
-  background-color: rbga(0,0,0,0);
+  padding: 1rem 0rem;
+  background-color: rgb(0, 0, 0,0);
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
@@ -117,12 +122,11 @@ h3{
 }
 
 .hero {
-  margin-top: -3rem;
+  position: relative;
   width: 100%;
-  top: -0rem;
   height: auto;
   object-fit: cover;
-  filter: brightness(.9);
+  filter: brightness(1);
   z-index: 1;
 }
 
@@ -135,11 +139,31 @@ h3{
   background-color: rgba(1, 1, 1, 0.05);
   border-radius: 1.5rem;
   border: 2px solid black;
-  margin-left: 5rem;
 }
 
 footer{
   height: 5vw;
   text-align: center;
   padding: 10% 0;
+}
+
+
+@media (max-width: 580px) {
+  /* Styles for phones */
+  .sidebar{
+    flex-direction: row;
+    width: 100%;
+    height: 3.5rem;
+  }
+
+  header{
+    font-size:3rem;
+    top: 0vw;
+
+  }
+
+  .wholepage{
+    flex-direction: column;
+    align-items: center;
+  }
 }
