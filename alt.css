@@ -88,11 +88,14 @@ button {
   gap: 1rem;
 }
 
-a {
+
+.sidebar a {
   font-size: 1.25rem;
   text-decoration: none;
   color: whitesmoke;
 }
+
+
 
 a.here{
   font-size: 1.25rem;
@@ -100,7 +103,7 @@ a.here{
   color: rgb(0, 0, 0);
 }
 
-a:visited{
+.sidebar a:visited{
   color: whitesmoke;
 }
 

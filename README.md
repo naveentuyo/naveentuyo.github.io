@@ -1,1 +1,1 @@
-Welcome to my website! This contains a bunch of cool stuff about me :]
+My person website, coded 100% by me! Please go check it out!
