@@ -7,7 +7,7 @@ header {
   text-align: center;
   margin: 0 auto;
   font-weight: 400;
-  width: 95vw;
+  width: 95%;
   position: relative;
   margin-bottom: -14vw;
   color: white;
@@ -145,9 +145,9 @@ h3{
 }
 
 footer{
-  height: 5vw;
+  height: 2rem;
   text-align: center;
-  padding: 10% 0;
+  padding: 5% 0;
 }
 
 
