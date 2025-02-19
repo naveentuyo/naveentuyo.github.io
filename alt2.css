@@ -18,8 +18,9 @@ header {
 
 
 
+/* 
 button {
-  background-color: #ffffff; /* Green */
+  background-color: #ffffff;
   border-radius: 100%;
   border: none;
   display: flex;
@@ -34,7 +35,8 @@ button {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-}
+} 
+*/
 
 .sidebar { 
   position: sticky;
@@ -46,7 +48,8 @@ button {
 
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
+  /* gap: 1rem; */
 
   padding: 0.5rem 0.5rem;
 
@@ -82,14 +85,15 @@ button {
   border: 1.5px solid rgb(43, 43, 43);
 }
 
-
 .sidebar a {
   font-size: 1.25rem;
   text-decoration: none;
   color: whitesmoke;
 }
 
-
+p {
+  font-size: 1rem;
+}
 
 a {
   text-decoration: underline;
@@ -111,10 +115,13 @@ h1 {
 
 h2 {
   font-size: 3.052;
+  margin-bottom: 0.5rem;
 }
 
 h3{
   font-size: 2.441;
+  margin-bottom: 0rem;
+
 }
 
 .hero {
@@ -126,7 +133,6 @@ h3{
   z-index: 1;
 }
 
-
 footer{
   height: 2rem;
   text-align: center;
@@ -134,21 +140,56 @@ footer{
 }
 
 .social {
+  background-color: #ffffff;
   width:auto;
   display: inline;
   text-align: center;
+  /* display: flex; */
+  align-items: center;
+  gap: .5rem;
+  font-size: 1rem;
+
   border-radius: .5rem;
   border: 1.5px solid rgb(43, 43, 43);
+}
+
+.social img{
+  width: 37px;
+  height: 37px;
+}
+
+
+.gmailholder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.2rem;
+}
+
+.socialinner{
+  background-color: #ffffff;
+  width:auto;
+  display: inline;
+  text-align: center;
+  display: flex;
+  padding-right: .5rem;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.socialorgan{
+  display: flex;
+  gap: 1rem;
 }
 
 .skillicon {
   width: 3rem;
   height: 3rem;
+  margin-left: .4rem;
 }
-/* .social {
-  text-decoration: none;
-  height: ;
-} */
+
 
 @media (max-width: 580px) {
   /* Styles for phones */
