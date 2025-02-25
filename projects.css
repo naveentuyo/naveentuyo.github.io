@@ -1,0 +1,38 @@
+body {
+    font-family: figtree;
+}
+  
+.projectHolder {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+.projectIcon {
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 3.815rem;
+    width: 100%;
+    text-align: center;
+}
+  
+h2 {
+    font-size: 3.052;
+}
+
+h3{
+    font-size: 2.441;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+#entry {
+    text-align: center;
+}

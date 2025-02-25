@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="projects.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <button @click="goHome" id="backButton">Back</button>
+    <h1>Projects</h1>
+
+    <p id="entry">
+        Welcome to my project page! My projects are from a wide range of disciplines.
+        <br> Including Game Development, Web Development, Backend, Applications and more. 
+       <br> Click on each item to expand.
+    </p>
+    <h2>My Favorites</h2> <hr>
+    <div class="projectHolder" >
+        <div class="projectItem" v-for="item in bestProj" @click="openProject(item)"> 
+            <img src="/files/favicons/32.png" alt="Image" class="projectIcon">
+            <h3>{{item.name}}</h3>
+        </div>
+    </div>
+
+    <h2>Other</h2> <hr>
+    <div class="projectHolder" >
+        <div class="projectItem" v-for="item in allProj" @click="openProject(item)"> 
+            <img src="/files/favicons/32.png" alt="Image" class="projectIcon">
+            <h3>{{item.name}}</h3>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+const { createApp, ref } = Vue
+
+createApp({setup(){
+// All my projects
+const aProj = [
+    {
+        name:"Project 1",
+        text:"Okay great, here are all of my items! Wow so great!!!",
+        icons:[],
+    },
+    
+    {
+        name:"Project 2",
+        text:"Okay great, here are all of my items! Wow so great!!!",
+        icons:[],
+    },
+    
+    {
+        name:"Project 3",
+        text:"Okay great, here are all of my items! Wow so great!!!",
+        icons:[],
+    },
+    
+    {
+        name:"Project 4",
+        text:"Okay great, here are all of my items! Wow so great!!!",
+        icons:[],
+    },
+
+    {
+        name:"Project 5",
+        text:"Okay great, here are all of my items! Wow so great!!!",
+        icons:[],
+    },
+]
+
+
+
+// Best ones here
+const bProj = [
+  aProj[0],
+]
+
+
+const message = ref('Message here')
+const bestProj = ref(bProj)
+const allProj = ref(aProj)
+
+
+
+const goHome = function(){
+    window.location.href = "index.html"
+}
+
+const openProject = (name) => {
+    console.log(name);
+}
+
+
+return {
+    message, bestProj, allProj, goHome, openProject
+}
+
+}}).mount('#app')
+</script>
+
+</html>
