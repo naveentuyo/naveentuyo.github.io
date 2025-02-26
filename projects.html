@@ -17,14 +17,20 @@
 </head>
 <body>
 <div id="app">
+    <div id="header-div">
     <button @click="goHome" id="backButton">Back</button>
     <h1>Projects</h1>
+    </div>
 
     <p id="entry">
         Welcome to my project page! My projects are from a wide range of disciplines.
         <br> Including Game Development, Web Development, Backend, Applications and more. 
        <br> Click on each item to expand.
     </p>
+
+
+    <div id="content">
+    
     <h2>My Favorites</h2> <hr>
     <div class="projectHolder" >
         <div class="projectItem" v-for="item in bestProj" @click="openProject(item)"> 
@@ -40,7 +46,15 @@
             <h3>{{item.name}}</h3>
         </div>
     </div>
-</div>
+
+    <div id="projectPopup">
+        <h2>{{projectTitle}}</h2> <hr id="mid">
+        <p>Great All the info about the project goes here {{projectInfo}}</p>
+    </div>
+    </div><!-- Content Div -->
+
+    
+</div> <!-- App Div -->
 </body>
 <script>
 const { createApp, ref } = Vue
@@ -50,30 +64,35 @@ createApp({setup(){
 const aProj = [
     {
         name:"Project 1",
+        title:"Longer Project Name",
         text:"Okay great, here are all of my items! Wow so great!!!",
         icons:[],
     },
     
     {
         name:"Project 2",
+        title:"Longer Project Name",
         text:"Okay great, here are all of my items! Wow so great!!!",
         icons:[],
     },
     
     {
         name:"Project 3",
+        title:"Longer Project Name",
         text:"Okay great, here are all of my items! Wow so great!!!",
         icons:[],
     },
     
     {
         name:"Project 4",
+        title:"Longer Project Name",
         text:"Okay great, here are all of my items! Wow so great!!!",
         icons:[],
     },
 
     {
         name:"Project 5",
+        title:"Longer Project Name",
         text:"Okay great, here are all of my items! Wow so great!!!",
         icons:[],
     },
@@ -90,20 +109,25 @@ const bProj = [
 const message = ref('Message here')
 const bestProj = ref(bProj)
 const allProj = ref(aProj)
-
+const showPop = ref(true)
+const projectInfo = ref("PROJECT INFO")
+const projectTitle = ref("PROJECT TITLE")
 
 
 const goHome = function(){
     window.location.href = "index.html"
 }
 
-const openProject = (name) => {
-    console.log(name);
+const openProject = (proj) => {
+    projectInfo.value = proj.text;
+    projectTitle.value = proj.title;
+    showPop.value = !showPop.value;
 }
 
 
 return {
-    message, bestProj, allProj, goHome, openProject
+    message, bestProj, allProj, showPop, projectInfo, projectTitle,
+     goHome, openProject,
 }
 
 }}).mount('#app')

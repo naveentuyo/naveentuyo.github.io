@@ -1,7 +1,53 @@
 body {
     font-family: figtree;
+    padding: 0%;
+    margin: 0%;
 }
   
+#header-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/files/scroll.png");
+    background-size: cover;
+    background-position: 0px 71%;
+    /* background-size: 1430px 800px; */
+    padding-bottom: 0rem;
+}
+
+#backButton {
+    position:absolute;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+
+    font-weight: bold;
+    font-family: figtree;
+    font-size: 2rem;
+    
+    background: none;
+    border: 0px solid aliceblue; 
+    color: aliceblue;
+    
+    padding: 0rem .5rem;
+    border-radius: 1rem;
+
+}
+
+#content {
+    padding: 2rem;
+}
+
+#projectPopup {
+    position: fixed;
+    background-color: bisque;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    margin: 0% 0%;
+}
+
 .projectHolder {
     display: flex;
     flex-direction: row;
@@ -16,13 +62,15 @@ body {
 }
 
 h1 {
-    font-size: 3.815rem;
-    width: 100%;
+    position:static;
+    font-size: 4.5rem;
+    /* font-size: 3.815rem; */
     text-align: center;
+    color:aliceblue;
 }
   
 h2 {
-    font-size: 3.052;
+    text-align: center;
 }
 
 h3{
