@@ -31,7 +31,6 @@ body {
     
     padding: 0rem .5rem;
     border-radius: 1rem;
-
 }
 
 #content {
@@ -41,12 +40,98 @@ body {
 #projectPopup {
     position: fixed;
     background-color: bisque;
-    top: 10%;
-    left: 10%;
+    top: 50%;
+    left: 50%;
     width: 80%;
     height: 80%;
-    margin: 0% 0%;
+    max-width: 800px;
+    /* margin: .5vw .5vw; */
+    border-radius: 1rem;
+    transform: translate(-50%, -50%);
+
 }
+
+#projectPopup p,ul {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+#projectPopup h2 {
+    font-size: 1.4rem;
+}
+
+
+/* Add this to your CSS file (projects.css) */
+#projectPopup {
+    max-height: 80vh; /* Sets a maximum height of 80% of the viewport height */
+    overflow-y: auto; /* Enables vertical scrolling when content exceeds max-height */
+    
+    /* Optional styling to make the scrollbar look nicer */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+/* For WebKit browsers (Chrome, Safari, etc.) */
+#projectPopup::-webkit-scrollbar {
+    width: 8px;
+}
+
+#projectPopup::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#projectPopup::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+#projectPopup::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Grey div for the background/blur effect */
+#projectPopupHolder{
+    position: fixed;
+    margin: 0% 0%;
+    top: 0%;
+    left: 0%;
+    /* /* filter: blur(5px);  */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#project-title-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("/files/scroll.png");
+    background-size: cover;
+    background-position: 0px 71%; */
+    padding-bottom: 0rem;
+}
+
+#project-title-div h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#mid {
+    margin: 0 auto;
+    width: 88%;
+    text-align: center;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+#bar-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.skillicon {
+    width: 3rem;
+    height: 3rem;
+    margin-left: .4rem;
+}
+  
 
 .projectHolder {
     display: flex;
@@ -60,6 +145,39 @@ body {
     height: 8rem;
     cursor: pointer;
 }
+
+.link {
+    text-decoration: underline;
+    color: rgb(23, 116, 255);
+    cursor: pointer;
+}
+
+.social {
+    background-color: #ffffff;
+    width:auto;
+    display: inline;
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+    gap: .5rem;
+    font-size: 1rem;
+
+    border-radius: .5rem;
+    border: 1.5px solid rgb(43, 43, 43);
+}
+
+.socialinner{
+    background-color: #ffffff;
+    width:auto;
+    display: inline;
+    text-align: center;
+    display: flex;
+    padding-right: .5rem;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.2rem;
+} 
+
 
 h1 {
     position:static;
