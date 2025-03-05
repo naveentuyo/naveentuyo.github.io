@@ -51,7 +51,7 @@
     <div v-show="showPop" id="projectPopupHolder">
     <div id="projectPopup">
         <div id="project-title-div">
-            <button @click="openProject('blank',false)" id="backButton" style="font-size: 1.5rem">Close</button>
+            <button @click="openProject('blank',false)" id="backButton2" style="font-size: 1.5rem">Close</button>
             <h2 id="projTitle"  @click="openProjectLink()">{{currentProj.title}}</h2>
         </div>
 
@@ -135,7 +135,7 @@ const bProj = [
 
 const bestProj = ref(bProj)
 const allProj = ref(aProj)
-const showPop = ref(true)
+const showPop = ref(false)
 const currentProj = ref(blankProj)
 const htmlSnip = ref()
 
