@@ -1,0 +1,128 @@
+/* Jane Doe Portfolio - Unique CSS Naming Convention */
+
+
+
+.jd-portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.jd-portfolio-header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    height: auto;
+    width: 95%;
+}
+
+.jd-portfolio-logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.jd-portfolio-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.jd-portfolio-nav-link {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.jd-portfolio-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    gap: 50px;
+}
+
+.jd-portfolio-info-section {
+    flex: 1;
+}
+
+.jd-portfolio-name-heading {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.jd-portfolio-title-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.jd-portfolio-bio-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.jd-portfolio-social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.jd-portfolio-social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.jd-portfolio-social-linkedin {
+    background-color: #0277bd;
+}
+
+.jd-portfolio-social-facebook {
+    background-color: #3b5998;
+}
+
+.jd-portfolio-social-instagram {
+    background-color: #00c2cb;
+}
+
+.jd-portfolio-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jd-portfolio-circle-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #FF8C42; /* Orange color as requested */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .jd-portfolio-main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .jd-portfolio-social-links {
+        justify-content: center;
+    }
+}
