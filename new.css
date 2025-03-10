@@ -153,6 +153,7 @@ header {
 }
 
 
+
 p {
   font-size: 1rem;
 }
@@ -240,6 +241,10 @@ footer{
   margin-left: .4rem;
 }
 
+.smol {
+  width: 2.5rem;
+  height: 2.5rem;
+}
 /* 580 */
 @media (max-width: 780px) {
   /* Styles for phones */
