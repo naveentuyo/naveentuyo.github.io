@@ -11,12 +11,23 @@
 }
 
 #mario-project-card {
-    grid-template-areas:
-    'vid vid vid ';
-    /* display: flex;
+    /* grid-template-areas: 'vid vid vid m-inner'; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+#m-inner-2{
+    display: flex;
     flex-direction: row;
-    justify-content: space-between; */
-    gap: 2.5rem;
+    align-content: center;
+    min-width: 100%;
+}
+
+#m-inner-3{
+    width: 30%;
 }
 
 
