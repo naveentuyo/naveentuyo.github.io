@@ -147,7 +147,7 @@ header {
   padding: 0 5%;
   width: 80%;
  /* height: 400px; */
-  background-color: rgba(0, 69, 181, 0.05);
+  background-color: rgba(0, 69, 181, 0.1);
   border-radius: 1.5rem;
   border: 1.5px solid rgb(43, 43, 43);
 }
@@ -206,6 +206,12 @@ footer{
 
   border-radius: .5rem;
   border: 1.5px solid rgb(43, 43, 43);
+
+  cursor: pointer;
+}
+
+.social a:visited{
+  color: black;
 }
 
 .social img{
