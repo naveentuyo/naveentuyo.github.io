@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="aiproject.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30a26cfe9c.js" crossorigin="anonymous"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <div id="header-div">
+    <button @click="goHome" id="backButton">Back</button>
+    <h1>Projects</h1>
+    </div>
+
+    <p id="entry">
+        Welcome to my project page! My projects are from a wide range of disciplines.
+        <br> Including Game Development, Web Development, Backend, Applications and more. 
+       <br> Click on each item to expand.
+    </p>
+
+
+    <div id="content">
+    
+    <h2>My Favorites</h2> <hr>
+    <div class="projectHolder" >
+        <div class="projectItem" v-for="item in bestProj" @click="openProject(item)"> 
+            <img src="/files/favicons/32.png" alt="Image" class="projectIcon">
+            <h3>{{item.name}}</h3>
+        </div>
+    </div>
+
+    <h2>All</h2> <hr>
+    <div class="projectHolder" >
+        <div class="projectItem" v-for="item in allProj" @click="openProject(item)"> 
+            <img src="/files/favicons/32.png" alt="Image" class="projectIcon">
+            <h3>{{item.name}}</h3>
+        </div>
+    </div>
+
+    <div v-show="showPop" id="projectPopupHolder">
+    <div id="projectPopup">
+        <div id="project-title-div">
+            <button @click="openProject('blank',false)" id="backButton2" style="font-size: 1.5rem">Close</button>
+            <h2 id="projTitle"  @click="openProjectLink()">{{currentProj.title}}</h2>
+        </div>
+
+        <hr id="mid">
+        <p id="bar-holder">
+            <img class="skillicon" v-for="icon in currentProj.icons" :src="icon.src" :alt="icon.alt" /> 
+            <!-- <button v-show="currentProj.link!=''" @click="openProjectLink()" class="social"> 
+                <div style="color:black;" class="socialinner"> 
+                  <i class="fa-brands fa-github fa-2x"></i> Project Link
+                </div>
+            </button> -->
+        <p>
+        <!-- <p>Great All the info about the project goes here {{currentProj.text}}</p> -->
+        <div id="projectContent"></div>
+    </div>
+    </div>
+
+    </div><!-- Content Div -->
+
+    
+</div> <!-- App Div -->
+</body>
+<script>
+const { createApp, ref } = Vue
+
+createApp({setup(){
+const aiText = `
+<h2>Overview</h2>
+
+<p> 
+    100% Voice to Voice, full customizable, and easy-to-use chatbot. 
+    It supports voice interaction with customizable audio cues. 
+    Tons of different voices and features built in! This is a personal project to create a better voice assistant for free. 
+    It's one of my first projects using the OpenAi, Gemini, and Groq APIs.
+</p>
+
+<h2>Settings</h2>
+
+<p>All settings are in configs.py. Settings such as wake and hot words, personality, voices, and much more are easily accessible. All audio cues easily editable inside the Sounds folder.</p>
+
+<h2>Usage Guide</h2>
+
+<p>When speaking to the bot, all responses containing the wake word will be processed. The user can simply say &quot;&lt;wake_word&gt;, where is Mount Everest?&quot;, and the bot will respond. To interupt simply say the hot word while the bot is speaking. If the bot has just replied or interupted, the user does not need to say the wake word for a follow-up prompt. After a couple seconds the bot will sleep, and the wake word will be once again be required.</p>
+
+<h2>Full List of Features</h2>
+
+<ul><li>Edge TTS for fast and smooth voices, +300 choices</li><li>Many different languages TTS including English, Chinese, Spanish and many more</li><li>Fast Audio Recognition by speechrecognition or fasterwhisper for more powerful machines</li><li>Google Gemini or Groq for generating responses</li><li>Wake word recognition and interruption </li><li>Dynamic sentence processing</li><li>Conversational response listening</li><li>Hot word interruption</li><li>Audio cues</li><li>Fully customizable</li></ul>
+`
+
+
+const blankProj = {
+    name:"Blank",
+    title:"Longer Blank",
+    text:"Blank Project info here",
+    link:"",
+    icons:[
+        {src:"https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg", alt:"JavaScript"},
+        {src:"https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg", alt:"Python"}
+    ],
+}
+
+// All my projects
+const aProj = [
+    {
+        name:"AI Assistant",
+        title:"Voice to Voice Ai Assistant",
+        link: "https://github.com/naveentuyo/basic-ai-assistant",
+        html:aiText,
+        icons:[
+            {src:"https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg", alt:"Python"},
+        ],
+    },
+    blankProj,
+]
+
+// Best ones here
+const bProj = [
+  aProj[0],
+]
+
+
+const bestProj = ref(bProj)
+const allProj = ref(aProj)
+const showPop = ref(false)
+const currentProj = ref(blankProj)
+const htmlSnip = ref()
+
+const goHome = function(){
+    window.location.href = "index.html"
+}
+
+function decodeHtmlEntities(str){
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(str, "text/html");
+  return doc.documentElement.textContent; // Decode HTML entities
+}
+
+const openProjectLink = () => {
+    window.open(currentProj.value.link, '_blank')
+}
+
+const openProject = (proj, should=true) => {
+    if (!should){
+        showPop.value = false
+        return
+    }
+
+    currentProj.value = proj;
+    document.getElementById("projectContent").innerHTML = proj.html;
+
+    if (currentProj.value.link!=""){
+        document.getElementById("projTitle").classList.add("link");
+    }else{
+        document.getElementById("projTitle").classList.remove("link");
+    }
+    // currentProj.value = proj;
+    showPop.value = true;
+}
+
+
+return {
+    bestProj, allProj, showPop, currentProj, htmlSnip,
+     goHome, openProject, openProjectLink
+}
+
+}}).mount('#app')
+</script>
+
+</html>

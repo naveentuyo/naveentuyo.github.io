@@ -3,6 +3,16 @@ console.log("JavaScript is connected!");
 document.addEventListener('DOMContentLoaded', () => {
   const scrollLinks = document.querySelectorAll('.scroll-link');
 
+  // const luaIcons = document.querySelectorAll('.lua');
+
+  // luaIcons.forEach(icon => {
+  //   icon.width *=1.1
+  //   icon.width = 90
+
+  //   icon.height *=1.1
+
+  // })
+
   scrollLinks.forEach(link => {
 
     const targetId = link.getAttribute('href');
@@ -27,18 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('.scroll-link');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      
-    });
-  });
+  const seeBtn = document.querySelector(".see-more")
+  seeBtn.addEventListener("click", ()=>{
+    const content = document.getElementById('section1');
+
+
+    if (content.classList.contains('expanded')) {
+      seeBtn.textContent = 'See More ▼';
+    } else {
+      seeBtn.textContent = 'See Less ▲';
+    }
+
+    content.classList.toggle('expanded');
+    seeBtn.classList.toggle("open-see");
+  })
+
 });
-
-
 
 
 // Typewriter effect

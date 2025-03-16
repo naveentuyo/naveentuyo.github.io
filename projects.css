@@ -1,0 +1,98 @@
+.project-card{
+    position: relative;
+    max-height: 25.75rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-bottom: 5rem;
+}
+
+.expanded{
+    max-height: 2000px;
+}
+
+.hide {
+    display: none;
+}
+
+.see-more{
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+
+    width: 100%;
+
+    min-height: 3rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    padding-top: 4rem;
+    background-image: linear-gradient(rgba(240, 248, 255, 0), rgb(240, 248, 255,0.9),rgb(240, 248, 255));
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+
+    z-index: 2;
+    cursor: pointer;
+
+    transition: bottom 0.3s ease-out;
+}
+
+.open-see{
+    position: absolute;
+}
+
+.mario-vid {
+    width: 70%;
+    min-width: 180;
+    max-width: 700px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+#mario-project-card {
+    /* grid-template-areas: 'vid vid vid m-inner'; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    background-color: rgba(58, 0, 173, 0.2);
+    border-radius: 1.5rem;
+    border: 1.5px solid rgb(43, 43, 43);
+}
+
+#m-inner{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    gap: 2rem;
+}
+
+#m-inner-3{
+    min-width: 15rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* width: 30%; */
+}
+
+
+
+/* .hero{
+    background: #542d96; background: -webkit-linear-gradient(49deg, rgb(84, 45, 150) 1%, rgb(32, 173, 206) 98%); background: linear-gradient(49deg, rgb(84, 45, 150) 1%, rgb(32, 173, 206) 98%)
+}*/
+
+@media (max-width: 580px) {
+    /* Styles for phones */
+    #m-inner{
+        flex-direction: column;
+        gap: 0rem;
+    }
+  }

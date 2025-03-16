@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+  <script src="script.js"></script>
 
   <link rel="icon" type="image/x-icon" href="files/favicons/512.png">
-  <script src="script.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +20,7 @@
 
 <body>
   <div id="topholder">
+
     <div id="topbar"> 
       <h2>Naveen T.</h2>
       <div id="topbarnav">
@@ -29,6 +31,7 @@
         <a class="scroll-link" href="section4">Contact</a>
       </div>
     </div>
+
   </div>
 
   <div class="hero">
@@ -39,7 +42,7 @@
         <span class="wrap"></span>
       </h2>
 
-      <p>Full-time student interested in Computer Science and Artifical Intelligence</p>
+      <p>Current student @ Cambridge Rindge and Latin interested in CS and AI</p>
 
       <a class="scroll-link" href="section4">Get in touch</a>
 
@@ -53,27 +56,78 @@
     
     
   
-  <div class="content" id="content">
+  <div class="content">
 
   <!-- Add dark/light theme change-->
   <section id="section0" class="card">
     <h2>About Me</h2>
     <p> Hey there! I'm Naveen Tuyo, a full time highschool student (Class of 2026). I have a passion for creating solutions for real community issues through technology. 
-        I've been creating games on the Roblox platform for +3 years, as game development is a passion of mine. I enjoy reading books and playing ultimate frisbee in my free time!</p>
+      I've been creating games on the Roblox platform for +3 years, as game development is a passion of mine. I enjoy reading books and playing ultimate frisbee in my free time!
+    </p>
   </section>
 
-  <section id="section1" class="card">
-    <h2>Projects (Coming Soon)</h2>
-    <p>  I've done tons of projects in different disciplines, most extensively in game development. Project page is a work in progress, go checkout my GitHub instead!</p>
+  <!-- Projects Here -->
+  <section id="section1" class="card project-card">
+    <div class="see-more">See more ▼</div>
+    <h2>Projects</h2>
+    <p> 
+      (Working in progress, more projects will be uploaded soon!) <br>  <br>
+      I've done tons of projects in different disciplines, more extensivly with game development. 
+      Below are my favorites, click <a class="here" href="https://www.github.com/naveentuyo">here</a> for my Github
+    </p>
+
     <button onclick="window.open('https://www.github.com/naveentuyo', '_blank')" class="social  projbut"> 
-        <div style="color:black;" class="socialinner"> 
-          <i class="fa-brands fa-github fa-2x"></i> Github 
+      <div style="color:black;" class="socialinner"> 
+        <i class="fa-brands fa-github fa-2x"></i> Github 
+      </div>
+    </button>
+
+    <div id="mario-project-card">
+
+      <a href="https://www.roblox.com/games/15824949276/Kart-Game-Test"><h2>Mario Kart Game</h2></a>
+
+      <video controls autoplay loop muted class="mario-vid" controlsList="nodownload"  alt="Mario Kart Demo Video" >
+        Your browser does not support the video tag :(
+        <source src="./files/vids/yoshi-mp4.mp4" type="video/mp4">
+        
+      </video>
+
+      <div class="iconholder">
+        <img class="skillicon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
+        <img class="skillicon smol lua" src="files/images/luau-2.png" alt="Luau">
+        <img class="skillicon smol" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Roblox_Studio_logo_2021_present.svg/2048px-Roblox_Studio_logo_2021_present.svg.png" alt="Roblox Studio">
+      </div>
+
+      <div id="m-inner">
+        
+          <div id="m-inner-3">
+            <h3 style="margin-top: 0px;">Key Features</h3>
+            <ul>
+              <li>Fun karting physics</li>
+              <li>Drifting</li>
+              <li>Multiplayer</li>
+              <li>Items</li>
+              <li>Controller, Mobile, and PC Compatible</li>
+              <li>Mini-Boosting</li>
+              <li>Time Trials</li>
+              <li>Off-roading</li>
+            </ul>
+          </div>
+
+          <p>
+            This is my recreation the Mario Kart racing mechanics from scratch. This was a 3-month project I made during the summer. 
+            It emulates the feel and fun of playing Mario Kart! This was created using Roblox Studio and scripted in Luau (subset of Lua). 
+            Everything has been scripted by me, including the kart physics, items, drifting and more. A 3d artist decorated the map and created the VFX.
+            
+            <br>  <br>
+
+            Every force vector is calcuted per-frame, resulting in fluid controls while still being preformant. 
+            Players can play using a controller, keyboard + mouse, or mobile device. It also supports multiplayer, so players can race and challenge each other!             
+          </p>
         </div>
-      </button>
-    <!-- <p> I've done tons of projects in different disciplines. Below are my favorites, click <a class="here" href="https://www.github.com/naveentuyo">here</a> for my Github
-      
-      <a class="here" href="projects.html">here</a> for to see all my projects
-      </p> -->
+
+    </div>
+    <br>
   </section>
 
   <section id="section2" class="card">
@@ -97,6 +151,7 @@
     <p>
       <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" /> 
       <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" />
+      <img class="skillicon" src="files/images/luau-2.png" alt="Luau">
       <img class="skillicon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
       <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" />
       <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3" />
@@ -106,11 +161,11 @@
       JavaScript, Python, Lua, Java, HTML, and CSS -->
     </p>
 
-    <h2>Tools and Frameworks</h2>
+    <h2>Tools + Frameworks</h2>
 
       <p> 
         <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" />
-        <img class="skillicon" src="/files/vscode.svg" alt="vscode" /> 
+        <img class="skillicon" src="./files/images/vscode.svg" alt="git" /> 
         <img class="skillicon" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" /> 
         <img class="skillicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Roblox_Studio_logo_2021_present.svg/2048px-Roblox_Studio_logo_2021_present.svg.png" alt="Roblox Studio">
       </p>
@@ -143,7 +198,7 @@
       
       <button onclick="window.location.href = 'mailto:n@naveentuyo.net'" class="social email">
         <div class="gmailholder">
-          <img src="files/gmail.png" alt="Email"> 
+          <img src="files/images/gmail.png" alt="Email"> 
           Email
         </div>
       </button>
@@ -154,7 +209,7 @@
   </div>
 
   
-  <footer>Made with HTML5, CSS3, JS and ❤️. Naveen Tuyo ©2025</footer>
+  <footer>Made with HTML5, CSS3, JS, and ❤️. Naveen Tuyo ©2025</footer>
 </body>
 
 </html>
