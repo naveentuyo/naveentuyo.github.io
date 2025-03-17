@@ -1,1 +1,1 @@
-My person website, coded 100% by me! Please go check it out!
+My person website, coded 100% by me. [My Website](https://naveentuyo.net)
