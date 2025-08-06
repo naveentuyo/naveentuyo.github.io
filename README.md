@@ -1,1 +1,1 @@
-My person website, coded 100% by me. [My Website](https://naveentuyo.net)
+My personal website, coded 100% by me. [My Website](https://naveentuyo.net)
