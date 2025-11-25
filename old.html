@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+  <script src="script.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="files/favicons/512.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/30a26cfe9c.js" crossorigin="anonymous"></script>
+
+  <title>Naveen Tuyo</title>
+</head>
+
+<body>
+  <div id="topholder">
+
+    <div id="topbar"> 
+      <h2>Naveen T.</h2>
+      <div id="topbarnav">
+        <a class="scroll-link" href="section0">About</a>
+        <a class="scroll-link" href="section1">Projects</a>
+        <a class="scroll-link" href="section2">Education</a>
+        <a class="scroll-link" href="section3">Skills</a>
+        <a class="scroll-link" href="section4">Contact</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero">
+    <div id="hero-info">
+      <h1>Hi <span class="hand-emoji">👋</span>,</h1>
+      <h1>I'm Naveen</h1>
+      <h2  class="typewriter" data-period="5000" data-type='[ "Game Developer", "Programmer", "Ultimate Frisbee Player", "Book Enthusiast" ]'>
+        <span class="wrap"></span>
+      </h2>
+
+      <p>Current student interested in Computer Science and Artifical Intelligence</p>
+
+      <a class="scroll-link" href="section4">Get in touch</a>
+
+
+
+    </div>
+    <div id="hero-img"></div>
+    <!-- <img style="display:none" src="/files/medclose.jpg" alt="Profile Image" id="hero-img"> -->
+  </div> 
+
+    
+    
+  
+  <div class="content">
+
+  <!-- Add dark/light theme change-->
+  <section id="section0" class="card">
+    <h2>About Me</h2>
+    <p> Hey there! I'm Naveen Tuyo, a full time highschool student (Class of 2026). I have a passion for creating solutions for real community issues through technology. One way I do that is though <a href="https://www.tuyocreative.com?utm_source=personal_website">Tuyo Creative</a>, my web design business. 
+      I've been creating games on the Roblox platform for +3 years, as game development is a passion of mine. I enjoy reading books and playing ultimate frisbee in my free time!
+    </p>
+  </section>
+
+  <!-- Projects Here -->
+  <section id="section1" class="card project-card">
+    <div class="see-more">See more ▼</div>
+    <h2>Projects</h2>
+    <p> 
+      (Working in progress, more projects will be uploaded soon!) <br>  <br>
+      I've done tons of projects in different disciplines, more extensivly with game development. 
+      Below are my favorites, click <a class="here" href="https://www.github.com/naveentuyo">here</a> for my Github
+    </p>
+
+    <button onclick="window.open('https://www.github.com/naveentuyo', '_blank')" class="social  projbut"> 
+      <div style="color:black;" class="socialinner"> 
+        <i class="fa-brands fa-github fa-2x"></i> Github 
+      </div>
+    </button>
+
+    <div id="mario-project-card">
+
+      <a href="https://www.roblox.com/games/15824949276/Kart-Game-Test"><h2>Mario Kart Game</h2></a>
+
+      <video controls autoplay loop muted class="mario-vid" controlsList="nodownload"  alt="Mario Kart Demo Video" >
+        Your browser does not support the video tag :(
+        <source src="./files/vids/yoshi-mp4.mp4" type="video/mp4">
+        
+      </video>
+
+      <div class="iconholder">
+        <img class="skillicon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
+        <img class="skillicon smol lua" src="files/images/luau-2.png" alt="Luau">
+        <img class="skillicon smol" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Roblox_Studio_logo_2021_present.svg/2048px-Roblox_Studio_logo_2021_present.svg.png" alt="Roblox Studio">
+      </div>
+
+      <div id="m-inner">
+        
+          <div id="m-inner-3">
+            <h3 style="margin-top: 0px;">Key Features</h3>
+            <ul>
+              <li>Fun karting physics</li>
+              <li>Drifting</li>
+              <li>Multiplayer</li>
+              <li>Items</li>
+              <li>Controller, Mobile, and PC Compatible</li>
+              <li>Mini-Boosting</li>
+              <li>Time Trials</li>
+              <li>Off-roading</li>
+            </ul>
+          </div>
+
+          <p>
+            This is my recreation the Mario Kart racing mechanics from scratch. This was a 3-month project I made during the summer. 
+            It emulates the feel and fun of playing Mario Kart! This was created using Roblox Studio and scripted in Luau (subset of Lua). 
+            Everything has been scripted by me, including the kart physics, items, drifting and more. A 3d artist decorated the map and created the VFX.
+            
+            <br>  <br>
+
+            Every force vector is calcuted per-frame, resulting in fluid controls while still being preformant. 
+            Players can play using a controller, keyboard + mouse, or mobile device. It also supports multiplayer, so players can race and challenge each other! 
+            I really enjoyed building this game, I may even go back and add some new features.       
+          </p>
+        </div>
+
+    </div>
+    <br>
+  </section>
+
+  <section id="section2" class="card">
+    <h2>Education</h2>
+    <p>I'm currently a Senior at Cambridge Rindge and Latin High School (CRLS), Class of 2026! I'm actively involved in Falcon Band, Boys Ultimate Frisbee, and Invesment Club.
+    </p>
+    <h3>Relevant Coursework</h3>
+    <ul> 
+      <li>AP Calculus BC</li>
+      <li>AP Computer Science A</li>
+      <li>AP Computer Science Principles</li>
+      <li>Honors Pre-Calculus</li>
+    </ul>
+
+  </section>
+
+  <section id="section3" class="card">
+
+    
+    <h2>Programming Languages</h2>
+    <p>
+
+      <img src="https://skillicons.dev/icons?i=js,python,lua"/>
+      <img class="skillicon" src="files/images/luau-2.png" alt="Luau">
+      <img src="https://skillicons.dev/icons?i=java,html,css"/>
+
+<!--         
+    
+      <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" /> 
+      <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" />
+      <img class="skillicon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
+      <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" />
+      <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3" />
+      <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" /> -->
+
+      <!-- <br><br>
+      JavaScript, Python, Lua, Java, HTML, and CSS -->
+    </p>
+
+    <h2>Tools + Frameworks</h2>
+<!-- 
+      <p> 
+        <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" />
+        <img class="skillicon" src="./files/images/vscode.svg" alt="git" /> 
+        <img class="skillicon" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" /> 
+        <img class="skillicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Roblox_Studio_logo_2021_present.svg/2048px-Roblox_Studio_logo_2021_present.svg.png" alt="Roblox Studio">
+      </p> -->
+
+      <p>
+        <img src="https://skillicons.dev/icons?i=vscode,git,webflow,figma,vue,robloxstudio" />
+      </p>
+
+    <h2>Human Languages</h2>
+    <p>
+      I know a couple languages! I read, write, and speak both. 
+        <ul class="lang">
+            <li>English  | Native Speaker</li>
+            <li>Chinese | Intermediate</li>
+        </ul>
+    </p>
+  </section>
+
+  <section id="section4" class="card">
+    <h2>Contact Me</h2>
+    
+    <p class="socialorgan">
+      <button onclick="window.open('https://www.github.com/naveentuyo', '_blank')" class="social"> 
+        <div style="color:black;" class="socialinner"> 
+          <i class="fa-brands fa-github fa-2x"></i> Github 
+        </div>
+      </button>
+      
+      <button onclick="window.open('https://www.linkedin.com/in/naveen-tuyo-23856331a', '_blank')" class="social">
+        <div class="socialinner">
+          <i style="color:dodgerblue;" class="fa-brands fa-linkedin fa-2x"></i> LinkedIn
+        </div>
+      </button>
+      
+      <button onclick="window.location.href = 'mailto:n@naveentuyo.net'" class="social email">
+        <div class="gmailholder">
+          <img src="files/images/gmail.png" alt="Email"> 
+          Email
+        </div>
+      </button>
+    </p>
+  
+  </section>
+
+  </div>
+
+  
+  <footer>Made with HTML5, CSS3, JS, and ❤️. Naveen Tuyo ©2025</footer>
+</body>
+
+</html>
