@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,17 @@
         /* --- RESET & VARIABLES --- */
         :root {
             --bg: #ffffff;
-            --text: #111111;
-            --accent: #2A5CFF; /* Electric Blue */
-            --accent-secondary: #FF5733; /* Vibrant Orange */
-            --accent-tertiary: #00C897; /* Teal Green */
+            --text: #1d1d1d;
+            --accent: #2A5CFF;
+            /* Electric Blue */
+            --accent-secondary: #FF5733;
+            /* Vibrant Orange */
+            --accent-tertiary: #00C897;
+            /* Teal Green */
             --accent-hover: #002db3;
             --gray: #f4f4f4;
             --gray-dark: #e0e0e0;
-            --border: 2px solid #111;
+            --border: 2px solid #1a1a1a;
             --radius: 12px;
             --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             --shadow: 4px 4px 0px var(--text);
@@ -44,12 +48,19 @@
             transition: 0.2s ease;
         }
 
-        ul { list-style: none; }
+        /* ul { list-style: none; } */
 
         /* --- ANIMATIONS --- */
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .fade-up {
@@ -57,13 +68,21 @@
             animation: fadeUp 0.6s ease-out forwards;
         }
 
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
 
         /* --- LAYOUT SYSTEM (12 Column) --- */
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
             width: 100%;
@@ -76,10 +95,18 @@
         }
 
         /* --- UTILITIES --- */
-        .section-pad { padding: 100px 0; }
-        .mb-2 { margin-bottom: 1rem; }
-        .mb-4 { margin-bottom: 2rem; }
-        
+        .section-pad {
+            padding: 80px 0;
+        }
+
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+
         .btn {
             display: inline-block;
             padding: 12px 24px;
@@ -92,7 +119,7 @@
             box-shadow: var(--shadow);
             transition: all 0.2s ease;
         }
-        
+
         .btn:hover {
             background: transparent;
             color: var(--text);
@@ -124,7 +151,7 @@
             letter-spacing: -0.5px;
             position: relative;
         }
-        
+
         .logo::after {
             content: '';
             position: absolute;
@@ -137,7 +164,7 @@
             transform-origin: right;
             transition: transform 0.3s ease;
         }
-        
+
         .logo:hover::after {
             transform: scaleX(1);
             transform-origin: left;
@@ -191,7 +218,7 @@
             justify-content: center;
             position: relative;
         }
-        
+
         .hero-img::before {
             content: '';
             position: absolute;
@@ -214,8 +241,12 @@
             margin-bottom: 24px;
         }
 
-        h1 span { color: var(--accent); position: relative; display: inline-block; }
-        
+        h1 span {
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+        }
+
         h1 span::after {
             content: '';
             position: absolute;
@@ -234,12 +265,14 @@
             color: #555;
             max-width: 90%;
         }
+
         .hero-avatar {
             width: 100%;
             max-width: 350px;
             aspect-ratio: 1;
             object-fit: cover;
-            object-position: center 20%; /* or: 50% 20%, etc. */
+            object-position: center 20%;
+            /* or: 50% 20%, etc. */
             border-radius: var(--radius);
             border: var(--border);
             box-shadow: var(--shadow);
@@ -258,7 +291,7 @@
             font-size: 1.5rem;
             font-weight: 500;
         }
-        
+
         .about-text p strong {
             color: var(--accent-secondary);
             position: relative;
@@ -274,7 +307,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .about-stats::before {
             content: '';
             position: absolute;
@@ -285,9 +318,23 @@
             background: linear-gradient(90deg, var(--accent), var(--accent-secondary), var(--accent-tertiary));
         }
 
-        .stat-item { margin-bottom: 20px; }
-        .stat-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: 700; }
-        .stat-value { font-size: 1.5rem; font-weight: 800; color: var(--text); }
+        .stat-item {
+            margin-bottom: 20px;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            font-weight: 700;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text);
+        }
 
         /* --- INTERESTS (BENTO GRID) --- */
         .section-title {
@@ -321,12 +368,29 @@
             box-shadow: var(--shadow-hover);
         }
 
-        .card-large { grid-column: span 8; }
-        .card-small { grid-column: span 4; }
+        .card-large {
+            grid-column: span 8;
+        }
 
-        .card h3 { font-size: 2rem; margin-bottom: 15px; z-index: 2; font-weight: 800; }
-        .card p { font-size: 1.1rem; color: #444; z-index: 2; max-width: 90%; font-weight: 500; }
-        
+        .card-small {
+            grid-column: span 4;
+        }
+
+        .card h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            z-index: 2;
+            font-weight: 800;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #444;
+            z-index: 2;
+            max-width: 90%;
+            font-weight: 500;
+        }
+
         .card-bg-icon {
             position: absolute;
             bottom: -30px;
@@ -337,23 +401,50 @@
             pointer-events: none;
             transition: all 0.3s ease;
         }
-        
+
         .card:hover .card-bg-icon {
             transform: scale(1.1) rotate(-5deg);
             opacity: 0.3;
         }
-        
-        .card-accent-1 { background-color: #f0f4ff; border-color: var(--accent); }
-        .card-accent-1 h3 { color: var(--accent); }
-        .card-accent-1:hover { box-shadow: 8px 8px 0px var(--accent); }
 
-        .card-accent-2 { background-color: #fff0ec; border-color: var(--accent-secondary); }
-        .card-accent-2 h3 { color: var(--accent-secondary); }
-        .card-accent-2:hover { box-shadow: 8px 8px 0px var(--accent-secondary); }
-        
-        .card-accent-3 { background-color: #ecfcf9; border-color: var(--accent-tertiary); }
-        .card-accent-3 h3 { color: var(--accent-tertiary); }
-        .card-accent-3:hover { box-shadow: 8px 8px 0px var(--accent-tertiary); }
+        .card-accent-1 {
+            background-color: #f0f4ff;
+            border-color: var(--accent);
+        }
+
+        .card-accent-1 h3 {
+            color: var(--accent);
+        }
+
+        .card-accent-1:hover {
+            box-shadow: 8px 8px 0px var(--accent);
+        }
+
+        .card-accent-2 {
+            background-color: #fff0ec;
+            border-color: var(--accent-secondary);
+        }
+
+        .card-accent-2 h3 {
+            color: var(--accent-secondary);
+        }
+
+        .card-accent-2:hover {
+            box-shadow: 8px 8px 0px var(--accent-secondary);
+        }
+
+        .card-accent-3 {
+            background-color: #ecfcf9;
+            border-color: var(--accent-tertiary);
+        }
+
+        .card-accent-3 h3 {
+            color: var(--accent-tertiary);
+        }
+
+        .card-accent-3:hover {
+            box-shadow: 8px 8px 0px var(--accent-tertiary);
+        }
 
         /* --- SKILLS --- */
         .skill-card {
@@ -370,13 +461,13 @@
             align-items: center;
             gap: 15px;
         }
-        
+
         .skill-card:hover {
             transform: translate(-4px, -4px);
             box-shadow: var(--shadow-hover);
             background-color: #fffdf5;
         }
-        
+
         .skill-icon {
             width: 60px;
             height: 60px;
@@ -389,20 +480,35 @@
             margin-bottom: 5px;
             transition: transform 0.3s ease;
         }
-        
+
         .skill-card:hover .skill-icon {
             transform: scale(1.1) rotate(10deg);
             background: var(--accent);
         }
-        
-        .skill-card h4 { font-size: 1.2rem; font-weight: 800; margin: 0; }
-        .skill-card p { font-size: 0.9rem; color: #666; line-height: 1.4; margin: 0; }
+
+        .skill-card h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+            margin: 0;
+        }
 
         @media (max-width: 900px) {
-           .skill-card { grid-column: span 6; }
+            .skill-card {
+                grid-column: span 6;
+            }
         }
+
         @media (max-width: 600px) {
-           .skill-card { grid-column: span 12; }
+            .skill-card {
+                grid-column: span 12;
+            }
         }
 
         /* --- SKILLS ROW (ICONS) --- */
@@ -441,8 +547,15 @@
         }
 
         @media (max-width: 600px) {
-            .skills-container { gap: 25px; padding: 30px; }
-            .tech-icon { width: 45px; height: 45px; }
+            .skills-container {
+                gap: 25px;
+                padding: 30px;
+            }
+
+            .tech-icon {
+                width: 45px;
+                height: 45px;
+            }
         }
 
 
@@ -459,7 +572,7 @@
             border: var(--border);
             box-shadow: var(--shadow);
         }
-        
+
         .agency-section::before {
             content: '';
             position: absolute;
@@ -479,6 +592,7 @@
             margin-bottom: 25px;
             font-weight: 900;
         }
+
         .agency-section p {
             font-size: 1.3rem;
             max-width: 650px;
@@ -486,12 +600,14 @@
             opacity: 0.9;
             font-weight: 500;
         }
+
         .agency-section .btn {
             background: var(--bg);
             color: var(--text);
             border-color: var(--bg);
             box-shadow: 4px 4px 0px var(--accent-secondary);
         }
+
         .agency-section .btn:hover {
             background: var(--accent-secondary);
             color: var(--bg);
@@ -501,7 +617,8 @@
 
         /* --- PROJECTS --- */
         .project-card {
-            grid-column: span 4; /* Changed from 6 to 4 to fit 3 items nicely on large screens, or keep 6 and let it wrap */
+            grid-column: span 4;
+            /* Changed from 6 to 4 to fit 3 items nicely on large screens, or keep 6 and let it wrap */
             border: var(--border);
             border-radius: var(--radius);
             overflow: hidden;
@@ -509,23 +626,29 @@
             transition: all 0.3s ease;
             background: var(--bg);
         }
-        
+
         @media (min-width: 901px) {
-           .project-card { grid-column: span 4; }
+            .project-card {
+                grid-column: span 4;
+            }
         }
 
         @media (max-width: 900px) {
-           .project-card { grid-column: span 12; }
+            .project-card {
+                grid-column: span 12;
+            }
         }
-        
+
         .project-card:hover {
             transform: translate(-4px, -4px);
             box-shadow: var(--shadow-hover);
+            cursor: pointer;
         }
 
         .project-media {
             width: 100%;
-            height: 250px; /* Slightly reduced height for smaller cards */
+            height: 250px;
+            /* Slightly reduced height for smaller cards */
             background: var(--gray);
             display: flex;
             align-items: center;
@@ -534,22 +657,41 @@
             border-bottom: var(--border);
             overflow: hidden;
         }
-        
-        .project-media video, .project-media img {
+
+        .project-media video,
+        .project-media img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+         .project-media .imgtc {
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
         .project-card:hover .project-media img,
         .project-card:hover .project-media video {
             transform: scale(1.05);
         }
 
-        .project-info { padding: 25px; }
-        .project-info h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
-        .project-info p { font-size: 1rem; color: #555; margin-bottom: 15px; }
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .project-info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
 
         .tags span {
             display: inline-block;
@@ -563,6 +705,10 @@
             font-weight: 600;
         }
 
+        .mario-vid {
+            max-width: 100%;
+        }
+
         /* --- FOOTER --- */
         footer {
             border-top: var(--border);
@@ -571,25 +717,61 @@
             background: var(--bg);
         }
 
-        .footer-grid { display: flex; justify-content: space-between; align-items: center; }
-        
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
-            h1 { font-size: 3.5rem; }
-            .hero-content { grid-column: span 12; order: 2; text-align: center; }
-            .hero-img { grid-column: span 12; order: 1; margin-bottom: 40px; }
-            .card-large, .card-small, .about-text, .about-stats { grid-column: span 12; }
-            .agency-section h2 { font-size: 2.5rem; }
-            .footer-grid { flex-direction: column; gap: 30px; text-align: center; }
-            .nav-links a { margin: 0 12px; }
-            .section-pad { padding: 80px 0; }
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-content {
+                grid-column: span 12;
+                order: 2;
+                text-align: center;
+            }
+
+            .hero-img {
+                grid-column: span 12;
+                order: 1;
+                margin-bottom: 40px;
+            }
+
+            .card-large,
+            .card-small,
+            .about-text,
+            .about-stats {
+                grid-column: span 12;
+            }
+
+            .agency-section h2 {
+                font-size: 2.5rem;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .nav-links a {
+                margin: 0 12px;
+            }
+
+            .section-pad {
+                padding: 50px 0;
+            }
         }
     </style>
     <script>
         // Simple script to trigger animations on scroll
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const fadeElements = document.querySelectorAll('.fade-up');
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -606,6 +788,7 @@
         });
     </script>
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -630,30 +813,32 @@
                 <script>
                     const el = document.querySelector('.typograph');
                     const phrases = ["Game Developer ", "Entrepreneur ", "Full-Time Nerd 🤓 ", "Student ", "Programmer "];
-                    let i=0, j=0, del=false;
-                    (function t(){
-  const cur = phrases[i];
-  el.textContent = del ? cur.slice(0,j--) : cur.slice(0,j++);
-  
-  if(!del && j===cur.length) {
-    del=true;
-    setTimeout(t,2000); // pause 1s at end
-    return;
-  }
-  if(del && j<0) {
-    del=false;
-    i=(i+1)%phrases.length;
-    j=0;
-  }
-  setTimeout(t,100);
-})();
+                    let i = 0, j = 0, del = false;
+                    (function t() {
+                        const cur = phrases[i];
+                        el.textContent = del ? cur.slice(0, j--) : cur.slice(0, j++);
+
+                        if (!del && j === cur.length) {
+                            del = true;
+                            setTimeout(t, 2000); // pause 1s at end
+                            return;
+                        }
+                        if (del && j < 0) {
+                            del = false;
+                            i = (i + 1) % phrases.length;
+                            j = 0;
+                        }
+                        setTimeout(t, 100);
+                    })();
                 </script>
                 <p class="subtitle mb-4 fade-up delay-1">
                     I type and funny things happen. Welcome to my website, please make yourself at home!
                 </p>
                 <div class="fade-up delay-2">
                     <a href="#contact" class="btn">Get in Touch</a>
-                    <a href="https://github.com" target="_blank" style="margin-left: 20px; font-weight: 700; border-bottom: 2px solid var(--text);">Check Github &rarr;</a>
+                    <a href="https://github.com" target="_blank"
+                        style="margin-left: 20px; font-weight: 700; border-bottom: 2px solid var(--text);">Check Github
+                        &rarr;</a>
                 </div>
             </div>
             <div class="hero-img fade-up delay-1">
@@ -672,10 +857,13 @@
                     I'm Naveen, a senior at Cambridge Rindge and Latin (Class of '26).
                 </p>
                 <p class="mb-2">
-                    Most people know me for <a href="https://www.tuyocreative.com"> <strong>Tuyo Creative</strong> </a>, my web design agency where I help brick-and-mortar businesses actually look good online. No fluff, just good design.
+                    Some people know me for <a href="https://www.tuyocreative.com"> <strong>Tuyo Creative</strong> </a>,
+                    my web design agency where I help brick-and-mortar businesses look great online.
                 </p>
                 <p>
-                    When I'm not debugging CSS or studying for AP Calc, I'm probably scripting Luau for Roblox games, reading, or chasing plastic discs (Ultimate Frisbee). I speak fluent English, decent Chinese, and broken Python.
+                    When I'm not studying or working on my business, I'm probably scripting Luau for Roblox games,
+                    reading, or chasing plastic discs (Ultimate Frisbee). I speak fluent English, decent Chinese, and
+                    broken Python (among others).
                 </p>
             </div>
             <div class="about-stats fade-up delay-1">
@@ -708,7 +896,9 @@
             <div class="card card-large card-accent-1 fade-up">
                 <div>
                     <h3>Web Design & Business</h3>
-                    <p>Running <strong>Tuyo Creative</strong>. We specialize in functional yet beatiful websites for local Cambridge businesses. I believe the best website is a simple website. It's #1 purpose is to convey information to the user, not bedazzle them with animiations.</p>
+                    <p>Running <strong>Tuyo Creative</strong>. We specialize in functional yet beatiful websites for
+                        local Cambridge businesses. I believe the best website is a simple website. It's #1 purpose is
+                        to convey information to the user, not bedazzle them with animiations.</p>
                 </div>
                 <div class="card-bg-icon">💼</div>
             </div>
@@ -717,7 +907,8 @@
             <div class="card card-small card-accent-2 fade-up delay-1">
                 <div>
                     <h3>Game Dev</h3>
-                    <p>3+ years on Roblox Platform with +5M plays from users. It's a massive market and a great engine for all sorts of projects.</p>
+                    <p>3+ years on Roblox Platform with +5M plays from users. It's a massive market and a great engine
+                        for all sorts of projects.</p>
                 </div>
                 <div class="card-bg-icon">🎮</div>
             </div>
@@ -735,9 +926,12 @@
             <div class="card card-large fade-up delay-3" style="border-color: var(--text);">
                 <div>
                     <h3>Always Learning</h3>
-                    <p>Currently diving into AI and Computer Science concepts. Relevant coursework: Multivariate Calulus, AP CSA, AP Calculus BC, AP CSP. I also read books when my attention span permits. My favorite book is <strong>Atomic Habits</strong>.
-                    <br><br>
-                    I also speak, read, and write Chinese proficiently. A great C-Drama to watch is <strong>Joy Of Life</strong>. You won't regret it!
+                    <p>Currently diving into AI and Computer Science concepts. Relevant coursework: Multivariate
+                        Calulus, AP CSA, AP Calculus BC, AP CSP. I also read books when my attention span permits. My
+                        favorite book is <strong>Atomic Habits</strong>.
+                        <br><br>
+                        I also speak, read, and write Chinese proficiently. A great C-Drama to watch is <strong>Joy Of
+                            Life</strong>. You won't regret it!
                     </p>
                 </div>
                 <div class="card-bg-icon">📚</div>
@@ -745,62 +939,40 @@
         </div>
     </section>
 
-    <!-- <section id="section3" class="card container">
-
-    
-    <h2>Programming Languages</h2>
-    <p>
-
-      <img src="https://skillicons.dev/icons?i=js,python,lua"/>
-      <img class="skillicon" src="files/images/luau-2.png" alt="Luau">
-      <img src="https://skillicons.dev/icons?i=java,html,css"/>
-
-    </p>
-
-    <h2>Tools + Frameworks</h2>
-    
-      <p>
-        <img class="skillicon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" />
-        <img class="skillicon" src="./files/images/vscode.svg" alt="git" /> 
-        <img class="skillicon" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" /> 
-        <img class="skillicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Roblox_Studio_logo_2021_present.svg/2048px-Roblox_Studio_logo_2021_present.svg.png" alt="Roblox Studio">
-      </p>
-
-      <p>
-        <img src="https://skillicons.dev/icons?i=vscode,git,webflow,figma,vue,robloxstudio" />
-      </p>
-
-    <h2>Human Languages</h2>
-    <p>
-      I know a couple languages! I read, write, and speak both. 
-        <ul class="lang">
-            <li>English  | Native Speaker</li>
-            <li>Chinese | Intermediate</li>
-        </ul>
-    </p>
-    </section> -->
-      
     <!-- SKILLS GRID (NEW) -->
     <section class="container mb-4">
         <div class="section-title fade-up">My Toolkit</div>
         <div class="grid">
             <div class="skills-container fade-up">
                 <!-- HTML5 -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                    title="HTML5" class="tech-icon">
                 <!-- CSS3 -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                    title="CSS3" class="tech-icon">
+                <!-- JAVA -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                    title="Java" class="tech-icon">
+                <!-- AWS -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                    alt="AWS" title="AWS" class="tech-icon">
                 <!-- JS -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" class="tech-icon">
+                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" class="tech-icon">
                 <!-- Lua (Roblox) -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Luau / Roblox" title="Luau / Roblox" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Luau / Roblox"
+                    title="Luau / Roblox" class="tech-icon">
                 <!-- Python -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                    title="Python" class="tech-icon">
                 <!-- Webflow -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow" title="Webflow" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow"
+                    title="Webflow" class="tech-icon">
                 <!-- Figma -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" title="Figma" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
+                    title="Figma" class="tech-icon">
                 <!-- Git -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" class="tech-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"
+                    class="tech-icon">
             </div>
         </div>
     </section>
@@ -809,17 +981,22 @@
     <section id="projects" class="section-pad container">
         <div class="section-title fade-up">What I've Worked On</div>
         <div class="grid">
-            
+
             <!-- Project 1: Mario Kart -->
-            <div class="project-card fade-up">
+            <div class="project-card fade-up" data-template-id="mk">
                 <div class="project-media">
                     <!-- REPLACE WITH YOUR VIDEO or SCREENSHOT -->
                     <!-- <video src="path/to/your/video.mp4" autoplay loop muted></video> -->
-                    <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1000&auto=format&fit=crop" alt="Mario Kart Clone">
+                     <video controls autoplay loop muted class="mario-vid" controlsList="nodownload" alt="Mario Kart Demo Video">
+                Your browser does not support the video tag :(
+                <source src="./files/vids/yoshi-mp4.mp4" type="video/mp4">
+            </video>
+ 
                 </div>
                 <div class="project-info">
                     <h3>Mario Kart in Roblox</h3>
-                    <p>A complete recreation of the game with custom physics, drifting, items, and multiplayer. Built in 3 months over the summer.</p>
+                    <p>A complete recreation of the game with custom physics, drifting, items, and multiplayer. Built in
+                        3 months over the summer.</p>
                     <div class="tags">
                         <span style="border-color: var(--accent-secondary); color: var(--accent-secondary);">Luau</span>
                         <span>Roblox Studio</span>
@@ -829,13 +1006,14 @@
             </div>
 
             <!-- Project 2: Tuyo Creative -->
-            <div class="project-card fade-up delay-1">
+            <div class="project-card fade-up delay-1" data-template-id="tc">
                 <div class="project-media">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1000&auto=format&fit=crop" alt="Web Design">
+                    <img src="./files/images/tcthumb.png" 
+     alt="Web Design" class="imgtc">
                 </div>
                 <div class="project-info">
                     <h3>Tuyo Creative Agency</h3>
-                    <p>My agency for local Cambridge businesses. We build sites that don't suck. Mobile-first & human-centered.</p>
+                    <p>My agency for local Cambridge businesses. We build sites that don't suck; its that simple.</p>
                     <div class="tags">
                         <span style="border-color: var(--accent); color: var(--accent);">Webflow</span>
                         <span>Design</span>
@@ -844,35 +1022,87 @@
                 </div>
             </div>
 
-            <!-- Project 3: AI Voice Chatbot -->
-            <div class="project-card fade-up delay-2">
+            <!-- Project 3: AI Voice Chatbot
+            <div class="project-card fade-up delay-2" data-template-id="chat">
                 <div class="project-media">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop" alt="AI Chatbot">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop"
+                        alt="AI Chatbot">
                 </div>
                 <div class="project-info">
                     <h3>Voice-to-Voice Chatbot</h3>
-                    <p>A conversational AI that actually listens. Real-time audio processing and synthesis for natural chats.</p>
+                    <p>A conversational AI that listens and responds to you. Real-time audio processing and synthesis for natural
+                        chats.</p>
                     <div class="tags">
                         <span style="border-color: var(--accent-tertiary); color: var(--accent-tertiary);">Python</span>
                         <span>OpenAI API</span>
                         <span>Audio</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section>
-<!--     
-      <div class="container">
-            <div class="agency-section fade-up">
-                <h2>Need a website?</h2>
-                <p>If you are a local business looking for a site that doesn't suck, let's talk. I run Tuyo Creative to solve exactly that problem.</p>
-                <a href="mailto:email@naveentuyo.net" class="btn">Email Us</a>
-                <p></p>
-                <a href="www.tuyocreative.com" class="btn">Visit Our Website</a>
-            </div>
 
-        </div> -->
+    <div id="project-modal" class="modal-overlay">
+
+        <button class="close-btn">&times;</button>
+
+        <div id="mk" class="modal-content modal-template hidden">
+            <h2>My Mario Kart Clone!</h2> <a href="https://www.roblox.com/games/15824949276/Kart-Game-Test">
+                <h2>Link</h2>
+            </a>
+
+            <video controls autoplay loop muted class="mario-vid" controlsList="nodownload" alt="Mario Kart Demo Video">
+                Your browser does not support the video tag :(
+                <source src="./files/vids/yoshi-mp4.mp4" type="video/mp4">
+            </video>
+            <p>This is my recreation the Mario Kart racing mechanics from scratch. This was a 3-month project I made
+                during the summer. It emulates the feel and fun of playing Mario Kart!
+                This was created using Roblox Studio and scripted in Luau (subset of Lua). Everything has been scripted
+                by me, including the kart physics, items, drifting and more.
+                A 3d artist decorated the map and created the VFX.
+                <br>
+                <br>
+
+                Every force vector is calcuted per-frame, resulting in fluid controls while still being preformant.
+                Players can play using a controller, keyboard + mouse, or mobile device. It also supports multiplayer,
+                so players can race and challenge each other!
+                I really enjoyed building this game, I may even go back and add some new features.
+                <br> <br>
+
+
+            </p>
+            <h3>Key Features</h3>
+            <ul>
+                <li>Fun karting physics</li>
+                <li>Drifting</li>
+                <li>Multiplayer</li>
+                <li>Items</li>
+                <li>Controller, Mobile, and PC Compatible</li>
+                <li>Mini-Boosting</li>
+                <li>Time Trials</li>
+                <li>Off-roading</li>
+            </ul>
+        </div>
+
+        <div id="tc" class="modal-content modal-template hidden">
+            <h2>Tuyo Creative 🎨</h2>
+            <!-- <img src="/assets/img/brand-mockup-large.jpg" alt="Design Mockup" style="max-width: 100%;"> -->
+            <a href="https://www.tuyocreative.com" class="btn">Visit Tuyo Creative</a>
+        </div>
+
+        <div id="chat" class="modal-content modal-template hidden">
+            <h2>Design Project: Brand Refresh 🎨</h2>
+            <p>This template is focused on large, high-resolution visuals and minimal text.</p>
+            <img src="/assets/img/brand-mockup-large.jpg" alt="Design Mockup" style="max-width: 100%;">
+            <h3>Design Breakdown</h3>
+            <ul>
+                <li>Color Palette</li>
+                <li>Typography Study</li>
+            </ul>
+        </div>
+
+    </div>
 
     <div class="container">
         <div class="agency-section fade-up">
@@ -885,13 +1115,14 @@
     </div>
     <!-- CONTACT / FOOTER -->
     <footer id="contact">
-      
+
         <div class="container">
 
             <div class="footer-grid fade-up delay-1" style="margin-top: 60px;">
                 <div>
                     <p><strong>Naveen Tuyo © 2025</strong></p>
-                    <p style="color: #777; font-size: 0.9rem; margin-top: 10px;">Made with HTML5, CSS3, and ❤️ in Cambridge, MA.</p>
+                    <p style="color: #777; font-size: 0.9rem; margin-top: 10px;">Made with HTML5, CSS3, and ❤️ in
+                        Cambridge, MA.</p>
                 </div>
                 <div class="nav-links">
                     <a href="#">LinkedIn</a>
@@ -901,5 +1132,230 @@
         </div>
     </footer>
 
+    <!-- Container for shapes -->
+    <div class="bg-shapes"></div>
+
+    <style>
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            /* shapes won’t block clicks */
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            /* circle; change for square/triangle via CSS clip-path */
+            opacity: 0.3;
+            background: #ff6;
+            /* color, can be random later */
+            animation: float 10s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(50px) rotate(360deg);
+            }
+        }
+    </style>
+
+    <script>
+        const container = document.querySelector('.bg-shapes');
+        const shapesCount = 20;
+
+        for (let i = 0; i < shapesCount; i++) {
+            const shape = document.createElement('div');
+            shape.classList.add('shape');
+
+            // Random size
+            const size = Math.random() * 70 + 40; // 20px to 70px
+            shape.style.width = size + 'px';
+            shape.style.height = size + 'px';
+
+            // Random position
+            shape.style.left = Math.random() * 100 + 'vw';
+            shape.style.top = Math.random() * 100 + 'vh';
+
+            // Random color
+            const colors = ['#ff6', '#6ff', '#f6f', '#6f6', '#f66'];
+            shape.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+            // Random animation duration
+            shape.style.animationDuration = (Math.random() * 30 + 15) + 's';
+
+            container.appendChild(shape);
+        }
+    </script>
+
+
+    <style>
+        /* --- 1. THE FULL OVERLAY (HIDDEN CONTAINER) --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            /* Deep transparent black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Animation and Visibility */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+            /* Ensures it is on top of all other elements */
+            overflow-y: auto;
+            /* Allows the entire modal container to scroll if needed */
+            padding: 20px;
+        }
+
+        /* --- 2. STATE: SHOW THE OVERLAY --- */
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* --- 3. THE TEMPLATE CONTAINERS (ALL HIDDEN BY DEFAULT) --- */
+        .modal-template {
+            display: none;
+            /* Styles shared by all template content boxes */
+            background: #fff;
+            /* Use your site's background color if different */
+            color: #333;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 900px;
+            width: 90%;
+            /* Responsive width */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            /* Transition for content box slide-in effect */
+            transform: translateY(-50px);
+            transition: transform 0.4s ease;
+            box-sizing: border-box;
+            /* Ensures padding is included in width/height */
+        }
+
+        /* Apply slide-in ONLY to the active template when the overlay is open */
+        .modal-overlay.open .modal-template.active {
+            transform: translateY(0);
+            /* Slides into view */
+        }
+
+        /* --- 4. STATE: SHOW THE ACTIVE TEMPLATE --- */
+        .modal-template.active {
+            display: block;
+        }
+
+        /* --- 5. CONTENT ELEMENTS & CLOSE BUTTON --- */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+            z-index: 1001;
+            /* Ensure close button is always clickable */
+        }
+
+        .close-btn:hover {
+            color: #c00;
+        }
+
+        /* Example styling for images within a template */
+        .modal-template img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Select all key elements
+            const projectCards = document.querySelectorAll('.project-card');
+            const modal = document.getElementById('project-modal');
+            const closeButton = document.querySelector('.close-btn');
+
+            // 2. Function to close the modal (remains the same)
+            function closeModal() {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+
+                // IMPORTANT: Hide the currently active template when closing
+                const activeTemplate = document.querySelector('.modal-template.active');
+                if (activeTemplate) {
+                    activeTemplate.classList.remove('active');
+                }
+            }
+
+            // 3. Attach click handlers to project cards
+            projectCards.forEach(card => {
+                console.log('hello there')
+                card.addEventListener('click', (event) => {
+                    console.log('booms')
+                    // Prevent default link behavior if the card is an anchor tag
+                    event.preventDefault();
+
+                    const templateId = card.getAttribute('data-template-id');
+                    const targetTemplate = document.getElementById(templateId);
+                    console.log(templateId)
+                    if (targetTemplate) {
+                        console.log('wow')
+                        // Ensure all templates are hidden first (if one was already open)
+                        const currentlyOpen = document.querySelector('.modal-template.active');
+                        if (currentlyOpen) {
+                            currentlyOpen.classList.remove('active');
+                        }
+
+                        // Show the specific content template
+                        targetTemplate.classList.add('active');
+
+                        // Show the main modal overlay
+                        modal.classList.add('open');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // 4. Attach event listeners to close the modal (remains the same)
+            closeButton.addEventListener('click', closeModal);
+
+            // Close when clicking the overlay background
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close when pressing the ESC key
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('open')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
