@@ -84,8 +84,27 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 35px 20px;
             width: 100%;
+            scroll-margin-top: 80px;            
+        }
+        .container-header {
+            margin: 0 auto;
+            padding: 0px 20px;
+            width: 100%;
+        }
+        .container-hero {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+            width: 100%;
+        }
+        .container-footer {
+            margin: 0 auto;
+            padding: 0px 20px;
+            width: 100%;        
         }
 
         .grid {
@@ -172,7 +191,7 @@
 
         .nav-links a {
             margin-left: 24px;
-            font-size: 0.95rem;
+            font-size: 1.2rem;
             font-weight: 600;
             position: relative;
         }
@@ -197,11 +216,11 @@
 
         /* --- HERO --- */
         .hero {
-            min-height: 600px;
+            /* min-height: 600px; */
             display: flex;
             align-items: center;
-            padding-top: 30px;
-            margin-bottom: 45px;
+            padding-top: 100px;
+            margin-bottom: 120px;
         }
 
         .hero-content {
@@ -564,13 +583,14 @@
             background: var(--text);
             color: var(--bg);
             border-radius: var(--radius);
-            padding: 100px 60px;
+            padding: 50px 60px;
             grid-column: span 12;
             text-align: center;
             position: relative;
             overflow: hidden;
             border: var(--border);
             box-shadow: var(--shadow);
+            margin-top: 100px;
         }
 
         .agency-section::before {
@@ -712,7 +732,7 @@
         /* --- FOOTER --- */
         footer {
             border-top: var(--border);
-            padding: 80px 0;
+            padding: 20px 0;
             margin-top: 80px;
             background: var(--bg);
         }
@@ -763,7 +783,7 @@
             }
 
             .section-pad {
-                padding: 50px 0;
+                padding-top: 50px 0px;
             }
         }
     </style>
@@ -793,20 +813,20 @@
 
     <!-- HEADER -->
     <header>
-        <div class="container">
+        <div class="container-header">
             <nav>
                 <a href="#" class="logo">NAVEEN TUYO.</a>
                 <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Work</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about">About Me</a>
+                    <a href="#interests">My Interests</a>
+                    <a href="#projects">Projects</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero container">
+    <section class="hero container-hero">
         <div class="grid">
             <div class="hero-content fade-up">
                 <h1>Howdy, I'm Naveen! <br><span class="typograph">Don't be scared!</span></h1>
@@ -849,7 +869,7 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="section-pad container">
+    <section id="about" class="container">
         <div class="grid">
             <div class="about-text fade-up">
                 <h2 class="mb-4">Who am I?</h2>
@@ -857,7 +877,7 @@
                     I'm Naveen, a senior at Cambridge Rindge and Latin (Class of '26).
                 </p>
                 <p class="mb-2">
-                    Some people know me for <a href="https://www.tuyocreative.com"> <strong>Tuyo Creative</strong> </a>,
+                    Some people know me for <a href="https://www.tuyocreative.com" target=”_blank”> <strong>Tuyo Creative</strong> </a>,
                     my web design agency where I help brick-and-mortar businesses look great online.
                 </p>
                 <p>
@@ -888,7 +908,7 @@
     </section>
 
     <!-- INTERESTS GRID (BENTO STYLE) -->
-    <section class="container mb-4">
+    <section id="interests" class="container mb-4">
         <div class="grid">
             <div class="section-title fade-up">What I Do</div>
 
@@ -978,7 +998,7 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="section-pad container">
+    <section id="projects" class="container">
         <div class="section-title fade-up">What I've Worked On</div>
         <div class="grid">
 
@@ -1021,8 +1041,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Project 3: AI Voice Chatbot
+<!-- 
+            Project 3: AI Voice Chatbot
             <div class="project-card fade-up delay-2" data-template-id="chat">
                 <div class="project-media">
                     <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop"
@@ -1048,7 +1068,7 @@
         <button class="close-btn">&times;</button>
 
         <div id="mk" class="modal-content modal-template hidden">
-            <h2>My Mario Kart Clone!</h2> <a href="https://www.roblox.com/games/15824949276/Kart-Game-Test">
+            <h2>My Mario Kart Clone!</h2> <a href="https://www.roblox.com/games/15824949276/Kart-Game-Test" target=”_blank”>
                 <h2>Link</h2>
             </a>
 
@@ -1088,7 +1108,7 @@
         <div id="tc" class="modal-content modal-template hidden">
             <h2>Tuyo Creative 🎨</h2>
             <!-- <img src="/assets/img/brand-mockup-large.jpg" alt="Design Mockup" style="max-width: 100%;"> -->
-            <a href="https://www.tuyocreative.com" class="btn">Visit Tuyo Creative</a>
+            <a href="https://www.tuyocreative.com" target=”_blank” class="btn">Visit Tuyo Creative</a>
         </div>
 
         <div id="chat" class="modal-content modal-template hidden">
@@ -1107,16 +1127,16 @@
     <div class="container">
         <div class="agency-section fade-up">
             <p>Wow, you scrolled to the bottom! Feel free to shoot me an email, or visit my other website 🤭</p>
-            <a href="mailto:email@naveentuyo.net" class="btn">Email Me</a>
+            <a href="mailto:email@naveentuyo.net" target=”_blank” class="btn">Email Me</a>
             <p></p>
-            <a href="https://www.tuyocreative.com" class="btn">Visit Tuyo Creative</a>
+            <a href="https://www.tuyocreative.com" target=”_blank” class="btn">Visit Tuyo Creative</a>
         </div>
 
     </div>
     <!-- CONTACT / FOOTER -->
     <footer id="contact">
 
-        <div class="container">
+        <div class="container-footer">
 
             <div class="footer-grid fade-up delay-1" style="margin-top: 60px;">
                 <div>
@@ -1125,8 +1145,8 @@
                         Cambridge, MA.</p>
                 </div>
                 <div class="nav-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
+                    <a href="https://www.linkedin.com/in/naveentuyo/" target=”_blank”>LinkedIn</a>
+                    <a href="https://github.com/naveentuyo" target=”_blank”>GitHub</a>
                 </div>
             </div>
         </div>
