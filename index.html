@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naveen Tuyo</title>
+    <link rel="icon" href="files/favicons/32.png" type="image/png">
+
     <style>
         /* --- RESET & VARIABLES --- */
         :root {
@@ -636,6 +638,46 @@
         }
 
         /* --- PROJECTS --- */
+
+        /* --- BIG PROJECT LINK STYLE --- */
+        .project-cta {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px 0;
+            background-color: var(--bg);
+            color: var(--text);
+            border: 2px solid var(--text);
+            border-radius: var(--radius);
+            text-align: center;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            /* Ensure the button sits on top of the card link */
+            position: relative; 
+            z-index: 10;
+        }
+
+        .project-cta:hover {
+            background-color: var(--accent); /* Turns Electric Blue on hover */
+            color: #fff;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px var(--text);
+        }
+
+        /* Optional: Make the button icon animate */
+        .project-cta span {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+        .project-cta:hover span {
+            transform: translateX(4px);
+        }
+
         .project-card {
             grid-column: span 4;
             /* Changed from 6 to 4 to fit 3 items nicely on large screens, or keep 6 and let it wrap */
@@ -999,7 +1041,7 @@
 
     <!-- PROJECTS SECTION -->
     <section id="projects" class="container">
-        <div class="section-title fade-up">What I've Worked On</div>
+        <div class="section-title fade-up">What I've Worked On (click 4 more!)</div>
         <div class="grid">
 
             <!-- Project 1: Mario Kart -->
@@ -1041,6 +1083,57 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Project 3: Watch Tracker -->
+
+            <div class="project-card fade-up delay-2" data-template-id="wt">
+                <div class="project-media">
+                    <img src="./files/images/watchthumb.png" 
+                         alt="Watch Tracker" class="imgtc" 
+                         onerror="this.style.display='none'; this.parentNode.style.backgroundColor='#f4f4f4';">
+                </div>
+                <div class="project-info">
+                    <h3>Watch Tracker (video inside!)</h3>
+                    <p>An application to track watch collections and availability.</p>
+                    <div class="tags mb-2">
+                        <span style="border-color: var(--accent-tertiary); color: var(--accent-tertiary);">Open Source</span>
+                        <span>Web App</span>
+                    </div>
+                    
+                    <a href="https://naveentuyo.net/watch-tracker/" 
+                       target="_blank" 
+                       class="project-cta" 
+                       onclick="event.stopPropagation()">
+                       Try it here! <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4: Text Diff -->
+
+            <div class="project-card fade-up delay-3" data-template-id="diff">
+                <div class="project-media">
+                     <img src="./files/images/diffcheckthumb.png" 
+                          alt="Text Diff Tool" class="imgtc"
+                          onerror="this.style.display='none'; this.parentNode.style.backgroundColor='#f4f4f4';">
+                </div>
+                <div class="project-info">
+                    <h3>Online Text Diff</h3>
+                    <p>A browser-based utility to compare text files and highlight differences.</p>
+                    <div class="tags mb-2">
+                        <span style="border-color: var(--text); color: var(--text);">Utility</span>
+                        <span>Tool</span>
+                    </div>
+
+                    <a href="https://naveentuyo.net/diff-checker/" 
+                       target="_blank" 
+                       class="project-cta" 
+                       onclick="event.stopPropagation()">
+                       Try it here! <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
 <!-- 
             Project 3: AI Voice Chatbot
             <div class="project-card fade-up delay-2" data-template-id="chat">
@@ -1068,14 +1161,17 @@
         <button class="close-btn">&times;</button>
 
         <div id="mk" class="modal-content modal-template hidden">
-            <h2>My Mario Kart Clone!</h2> <a href="https://www.roblox.com/games/15824949276/Kart-Game-Test" target=”_blank”>
-                <h2>Link</h2>
-            </a>
+            <h2>My Mario Kart Clone!</h2>
 
             <video controls autoplay loop muted class="mario-vid" controlsList="nodownload" alt="Mario Kart Demo Video">
                 Your browser does not support the video tag :(
                 <source src="./files/vids/yoshi-mp4.mp4" type="video/mp4">
             </video>
+
+            <a href="https://www.roblox.com/games/15824949276/Kart-Game-Test" target="_blank" class="btn">Game Link</a>
+            <br>
+            <h3>About this project</h2>
+
             <p>This is my recreation the Mario Kart racing mechanics from scratch. This was a 3-month project I made
                 during the summer. It emulates the feel and fun of playing Mario Kart!
                 This was created using Roblox Studio and scripted in Luau (subset of Lua). Everything has been scripted
@@ -1109,6 +1205,55 @@
             <h2>Tuyo Creative 🎨</h2>
             <!-- <img src="/assets/img/brand-mockup-large.jpg" alt="Design Mockup" style="max-width: 100%;"> -->
             <a href="https://www.tuyocreative.com" target=”_blank” class="btn">Visit Tuyo Creative</a>
+        </div>
+
+        <div id="wt" class="modal-content modal-template hidden">
+            <h2>Watch Tracker ⌚</h2>
+            
+            <video controls autoplay loop muted class="mario-vid" controlsList="nodownload" alt="Mario Kart Demo Video">
+                Your browser does not support the video tag :(
+                <source src="./files/vids/watch-list-demo.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/naveentuyo/watch-tracker" target="_blank" class="btn">View on GitHub</a>
+            <a href="https://naveentuyo.net/watch-tracker/" target="_blank" class="btn">Try it here!</a>
+
+            <br>
+
+            <h3>About this Project</h3>
+            <p>
+                This is a project I built to be an easy way to track and admire the watches I like! It's a simple, single-file application to track your watch collection and wishlist. It runs entirely in your browser with no server or login.
+                <br>
+                <h3>Features</h3>
+                <ul>
+                    <li>Zero Setup: Just download the HTML file and open it in any browser.</li>
+                    <li>Persistent: Your data is saved automatically in your browser (LocalStorage).</li>
+                    <li>Visual Gallery: View your watches in a card view with a scrollable image carousel.</li>
+                    <li>Detailed Tracking: Store name, price, multiple images, description, tags, and purchase links.</li>
+                    <li>Search & Sort: Filter by tag or name; sort by price or date added.</li>
+                    <li>Portable: Export your collection to a JSON file to back up or move to another device.</li>
+                </ul>
+        </div>
+
+        <div id="diff" class="modal-content modal-template hidden">
+            <h2>Online Text Diff Tool 📝</h2>
+            
+            <img src="./files/images/splitdiff.jpg" alt="Text Diff Demo" style="max-width: 100%; margin-top:20px;">
+
+            <a href="https://naveentuyo.net/diff-checker" target="_blank" class="btn">View Live Tool</a>
+            <a href="https://github.com/naveentuyo/diff-checker" target="_blank" class="btn">Github Repo</a>
+
+
+            <h3>About this Project</h3>
+            <p>
+                A seamless way to compare two text blocks directly in your browser. I created it to quickly see changes between texts while editing my long essays and reports. It is designed to be fast, effortless, and simple. No distractions in sight.
+            </p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>Real-time comparison</li>
+                <li>Syntax highlighting</li>
+                <li>No data stored on server</li>
+            </ul>
         </div>
 
         <div id="chat" class="modal-content modal-template hidden">
@@ -1307,6 +1452,68 @@
             border-radius: 8px;
             margin: 20px 0;
         }
+
+        /* --- MODAL FIXES --- */
+
+/* 1. Fix Scrolling & H2 Visibility */
+/* We change alignment from 'center' to 'flex-start' so the top is never cut off */
+.modal-overlay {
+    align-items: flex-start; 
+    padding-top: 60px; /* Pushes the modal down so it's not glued to the very top */
+    padding-bottom: 60px; /* Space at the bottom for scrolling */
+}
+
+/* 2. Fix the Headers (H2, H3) inside the modal */
+/* The global reset removed their margins, so we add them back */
+.modal-template h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding-right: 40px; /* Prevent text from hitting the close button */
+}
+
+.modal-template h3 {
+    margin-top: 30px; /* Give breathing room before new sections */
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 10px;
+}
+
+.modal-template p {
+    margin-bottom: 15px; /* Add spacing between paragraphs */
+}
+
+/* 3. Fix the Lists (UL/LI) */
+/* Restore bullets and indentation */
+.modal-template ul {
+    margin-left: 20px;  /* Indent the list */
+    margin-bottom: 25px; /* Space after the list */
+    list-style-type: disc; /* Ensure bullets are visible */
+    padding-left: 10px;
+}
+
+.modal-template li {
+    margin-bottom: 8px; /* Space between list items */
+    padding-left: 5px;
+}
+
+/* 4. Fix the Close Button */
+/* Change absolute to fixed so it stays on screen even when you scroll deep into the modal */
+.close-btn {
+    position: fixed; 
+    top: 20px;
+    right: 30px;
+    z-index: 1005;
+    background: rgba(255,255,255,0.8); /* Optional: distinct background */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     </style>
 
     <script>
