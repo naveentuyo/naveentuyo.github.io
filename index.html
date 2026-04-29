@@ -536,11 +536,9 @@
         .skills-container {
             grid-column: span 12;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 50px;
-            padding: 50px;
+            flex-direction: column;
+            gap: 30px;
+            padding: 40px 50px;
             background: var(--bg);
             border: var(--border);
             border-radius: var(--radius);
@@ -551,6 +549,36 @@
         .skills-container:hover {
             box-shadow: var(--shadow-hover);
             transform: translate(-2px, -2px);
+        }
+
+        .skills-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .skills-row + .skills-row {
+            border-top: 2px dashed var(--gray-dark);
+            padding-top: 30px;
+        }
+
+        .skills-row-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #666;
+            font-weight: 800;
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+
+        .skills-row-icons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            flex: 1;
         }
 
         .tech-icon {
@@ -567,15 +595,48 @@
             transform: scale(1.2) translateY(-5px);
         }
 
+        .cert-badge {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cert-badge:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        @media (max-width: 700px) {
+            .skills-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .skills-row-icons {
+                justify-content: flex-start;
+            }
+        }
+
         @media (max-width: 600px) {
             .skills-container {
                 gap: 25px;
                 padding: 30px;
             }
 
+            .skills-row-icons {
+                gap: 25px;
+            }
+
             .tech-icon {
                 width: 45px;
                 height: 45px;
+            }
+
+            .cert-badge {
+                width: 70px;
+                height: 70px;
             }
         }
 
@@ -943,8 +1004,16 @@
                 </div>
                 <div class="stat-item">
                     <div class="stat-label">Favorite Stack</div>
-                    <div class="stat-value">Vue, Node, and SQL </div>
+                    <div class="stat-value">TypseScript, CDK, and Lambda </div>
                 </div>
+                <!-- <div class="stat-item">
+                    <div class="stat-label">Certified</div>
+                    <div class="stat-value">AWS Cloud Practitioner</div>
+                    <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">
+                        Verify #<code style="font-size: 0.8rem;">acc2175d4ef047ecba6aafa36e7be4be2</code> at
+                        <a href="https://aws.amazon.com/verification" target="_blank" style="font-weight: 700; border-bottom: 2px solid var(--accent); color: var(--accent);">aws.amazon.com/verification</a>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -1006,35 +1075,61 @@
         <div class="section-title fade-up">My Toolkit</div>
         <div class="grid">
             <div class="skills-container fade-up">
-                <!-- HTML5 -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-                    title="HTML5" class="tech-icon">
-                <!-- CSS3 -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-                    title="CSS3" class="tech-icon">
-                <!-- JAVA -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
-                    title="Java" class="tech-icon">
-                <!-- AWS -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                    alt="AWS" title="AWS" class="tech-icon">
-                <!-- JS -->
-                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" class="tech-icon">
-                <!-- Lua (Roblox) -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Luau / Roblox"
-                    title="Luau / Roblox" class="tech-icon">
-                <!-- Python -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-                    title="Python" class="tech-icon">
-                <!-- Webflow -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg" alt="Webflow"
-                    title="Webflow" class="tech-icon">
-                <!-- Figma -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
-                    title="Figma" class="tech-icon">
-                <!-- Git -->
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"
-                    class="tech-icon">
+                <div class="skills-row">
+                    <div class="skills-row-label">Languages</div>
+                    <div class="skills-row-icons">
+                        <!-- TypeScript -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                            alt="TypeScript" title="TypeScript" class="tech-icon">
+                        <!-- Python -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                            title="Python" class="tech-icon">
+                        <!-- JavaScript -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" title="JavaScript" class="tech-icon">
+                        <!-- HTML5 -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                            title="HTML5" class="tech-icon">
+                        <!-- Luau / Roblox -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Luau / Roblox"
+                            title="Luau / Roblox" class="tech-icon">
+                        <!-- CSS3 -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                            title="CSS3" class="tech-icon">
+                        <!-- Java -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                            title="Java" class="tech-icon">
+                    </div>
+                </div>
+
+                <div class="skills-row">
+                    <div class="skills-row-label">Tools</div>
+                    <div class="skills-row-icons">
+                        <!-- AWS -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                            alt="AWS" title="AWS" class="tech-icon">
+                        <!-- Webflow -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg"
+                            alt="Webflow" title="Webflow" class="tech-icon">
+                        <!-- Figma -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
+                            title="Figma" class="tech-icon">
+                        <!-- Git -->
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                            title="Git" class="tech-icon">
+                    </div>
+                </div>
+
+                <div class="skills-row">
+                    <div class="skills-row-label">Certs</div>
+                    <div class="skills-row-icons">
+                        <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/acc2175d4ef047ecba6aafa36e7be4be" target="_blank"
+                            title="AWS Certified Cloud Practitioner — verify with #acc2175d4ef047ecba6aafa36e7be4be2">
+                            <img src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+                                alt="AWS Certified Cloud Practitioner" class="cert-badge">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1126,6 +1221,31 @@
                     </div>
 
                     <a href="https://naveentuyo.net/diff-checker/" 
+                       target="_blank" 
+                       class="project-cta" 
+                       onclick="event.stopPropagation()">
+                       Try it here! <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5: AWS Cert Prepper -->
+            <div class="project-card fade-up" data-template-id="aws">
+                <div class="project-media">
+                    <img src="./files/images/quiz-thumb.png" 
+                         alt="AWS Cert Prepper" class="imgtc"
+                         onerror="this.style.display='none'; this.parentNode.style.backgroundColor='#f4f4f4';">
+                </div>
+                <div class="project-info">
+                    <h3>AWS Cert Prepper</h3>
+                    <p>Online practice tests and review sheets I made while studying for the AWS Cloud Practitioner exam.</p>
+                    <div class="tags mb-2">
+                        <span style="border-color: var(--accent-secondary); color: var(--accent-secondary);">AWS</span>
+                        <span>Study Tool</span>
+                        <span>Web App</span>
+                    </div>
+
+                    <a href="https://naveentuyo.net/aws-cert-prepper/" 
                        target="_blank" 
                        class="project-cta" 
                        onclick="event.stopPropagation()">
@@ -1253,6 +1373,26 @@
                 <li>Real-time comparison</li>
                 <li>Syntax highlighting</li>
                 <li>No data stored on server</li>
+            </ul>
+        </div>
+
+        <div id="aws" class="modal-content modal-template hidden">
+            <h2>AWS Cert Prepper ☁️</h2>
+
+            <a href="https://naveentuyo.net/aws-cert-prepper/" target="_blank" class="btn">Try it here!</a>
+            <a href="https://github.com/naveentuyo/aws-cert-prepper" target="_blank" class="btn">View on GitHub</a>
+
+            <h3>About this Project</h3>
+            <p>
+                A browser-based study pack I built while prepping for the AWS Certified Cloud Practitioner exam. It runs 7 full-length practice tests along with review sheets I wrote to condense the material. Everything runs in your browser, no login or setup needed.
+            </p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>7 full practice exams</li>
+                <li>Review sheets covering core AWS services</li>
+                <li>Instant scoring and answer breakdowns</li>
+                <li>Runs entirely in the browser</li>
             </ul>
         </div>
 
